@@ -9,11 +9,11 @@ Currency.prototype.roundTwoDecimals = (amount) => {
   return Math.round(amount * 100) / 100;
 }
 
-Currency.prototype.canadianToUS = (canadian) => {
+Currency.prototype.canadianToUS = function(canadian) {
   return this.roundTwoDecimals(canadian * this.canadianDollar);
 }
 
-Currency.prototype.UStoCanadian = (us) => {
+Currency.prototype.UStoCanadian = function(us) {
   return this.roundTwoDecimals(us / this.canadianDollar);
 }
 
